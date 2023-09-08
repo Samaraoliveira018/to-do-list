@@ -1,0 +1,17 @@
+<ul class="tasks-list" *ngFor=" let task of taskService.tasks">
+  <li class="task-li">
+    <div>
+      <div>
+        <div>
+          {{task.nome}}
+        </div>
+      </div>
+    </div>
+  </li>
+  <app-edit-task [task]="task.id" *ngIf="task">
+  </app-edit-task>
+  <app-delete-task [task]="task">
+  </app-delete-task>
+
+</ul>
+

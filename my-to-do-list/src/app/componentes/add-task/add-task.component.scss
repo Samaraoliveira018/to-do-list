@@ -1,0 +1,31 @@
+div{
+    margin: 10px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+  .input-add-task{
+    width: 88%;
+    height: 30px;
+    padding: 7px;
+    border: #ebb3f5;
+    border-radius: 4px;
+    border-bottom-style: dotted;
+    background-color: #f1cbf1;
+    color: rebeccapurple;
+    font-size: 15px;
+    outline: none;
+}
+
+.add-task {
+  background-color: #b991e9;
+  border: none;
+
+  app-icone-svg img {
+    fill: red;
+  }
+  }
+}
