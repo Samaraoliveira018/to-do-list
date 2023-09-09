@@ -1,0 +1,10 @@
+<div>
+    <input type="text" class="input-add-task" placeholder="Adicionar tarefa 😉" [(ngModel)]="newTask.nome">
+    <button type="button" class="add-task" (click)="addTask()">
+        <app-icone-svg
+          [name]="'add'"
+          [width]="30"
+          [height]="30"
+        ></app-icone-svg>
+    </button>
+</div>
