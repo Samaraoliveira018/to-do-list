@@ -6,7 +6,7 @@ import {Observable} from "rxjs";
 })
 export class TaskService {
   private baseUrl = 'http://localhost:3000';
-  public tasks: any[]= [];
+  public tasks: any[] = [];
   constructor(private http: HttpClient) { }
 
   getTasks(): Observable<any> {
@@ -23,6 +23,13 @@ export class TaskService {
 
   atualizarTarefa(task: any): Observable<any> {
     return this.http.put(`${this.baseUrl}/tasks/${task.id}`,task);
+  }
+
+  updateTask(id: number, nome: string, done: boolean ) {
+    return this.http.put(`${this.baseUrl}/tasks/${id}`, {
+      nome: nome,
+      done: done
+    });
   }
 }
 
