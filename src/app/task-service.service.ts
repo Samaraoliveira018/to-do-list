@@ -21,15 +21,8 @@ export class TaskService {
     return this.http.delete(`${this.baseUrl}/tasks/${id}`);
   }
 
-  atualizarTarefa(task: any): Observable<any> {
+  updateTask(task: any): Observable<any> {
     return this.http.put(`${this.baseUrl}/tasks/${task.id}`,task);
-  }
-
-  updateTask(id: number, nome: string, done: boolean ) {
-    return this.http.put(`${this.baseUrl}/tasks/${id}`, {
-      nome: nome,
-      done: done
-    });
   }
 }
 

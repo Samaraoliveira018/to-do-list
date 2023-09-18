@@ -14,7 +14,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import { IconeSvgComponent } from './componentes/icone-svg/icone-svg.component';
-import { EditTaskComponent } from './componentes/edit-task/edit-task.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,6 @@ import { EditTaskComponent } from './componentes/edit-task/edit-task.component';
     AddTaskComponent,
     DeleteTaskComponent,
     IconeSvgComponent,
-    EditTaskComponent
   ],
   imports: [
     BrowserModule,

@@ -7,8 +7,11 @@ import {TaskService} from "../../task-service.service";
   styleUrls: ['./tasks.component.scss']
 })
 export class TasksComponent implements OnInit{
-  public editando: boolean = false;
-  constructor(public taskService:TaskService) {}
+  constructor(public taskService:TaskService) {
+    for (const task of this.taskService.tasks) {
+      task['editing'] = false;
+    }
+  }
 
   ngOnInit(): void {
     this.taskService.getTasks().subscribe((data)=>{
@@ -16,7 +19,20 @@ export class TasksComponent implements OnInit{
     });
   }
 
-  ativarEdicao() {
-    this.editando = true;
+  editTask(taskId: any) {
+    for (const task of this.taskService.tasks) {
+      if (task.id === taskId) {
+        task['editing'] = true;
+      } else {
+        task['editing'] = false;
+      }
+    }
+  }
+
+  saveEdition(task: any) {
+    task['editing'] = false;
+    this.taskService.updateTask(task).subscribe(()=>{
+      task['editing'] = false;
+    });
   }
 }

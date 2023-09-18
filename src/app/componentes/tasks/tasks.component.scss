@@ -1,5 +1,6 @@
 .tasks-list{
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 97%;
   list-style: none;
@@ -15,6 +16,24 @@
     text-overflow: ellipsis;
     overflow: hidden;
     width: 80%;
+
+    input{
+      width: 100%;
+      height: 100%;
+      background-color: #f1cbf1;
+      border: none;
+      outline: none;
+    }
+  }
+
+  .btn-edit-task{
+    display: flex;
+    align-items: center;
+    background-color: rgb(220 193 228 / 66%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
   }
 }
 
